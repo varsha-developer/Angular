@@ -1,0 +1,19 @@
+ <p>product works!</p>
+
+
+<div class="content">
+<div class="row">
+    
+    <div class="col-lg-3 contents" *ngFor="let item of productList">
+        <img class="img-responsive img-thumbnail imgClass" src="{{item.image}}" alt="image" >
+        <span >{{item.title}} <br><b>{{item.price | currency}} <br> <small style="font-size: xx-small;"  >{{item.description}}</small><br>{{item.category}}</b></span><br>
+
+       
+
+        <button  class="btn btn-warning " (click)="add(item)">Add</button>
+
+        <button class="btn btn-danger" (click)="deleteProduct(item)">Delete</button>
+    </div>
+    </div>
+</div>
+
